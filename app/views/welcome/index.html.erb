@@ -1,0 +1,21 @@
+<%= form_with do |form| %>
+  Form contents
+  
+<% end %>
+
+
+<%= form_with model: @article do |form| %>
+<%= form.label :title, "Title : "%>
+<%= form.text_field :title %><br>
+<%= form.label :body, "Body : "%>
+
+<%= form.text_area :body, size: "60*5" %>
+<%= form.submit %> 
+<%= form.select :city, ["Berlin", "Chicago", "Madrid"] %>
+
+
+<%= form.time_zone_select :time_zone %>
+
+
+<% end %>
+
